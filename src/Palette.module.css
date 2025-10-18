@@ -1,0 +1,273 @@
+.palette-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.palette-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: fit-content;
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+.palette-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+
+  background: var(--c-neut-050);
+
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+.row-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+
+  min-width: 200px;
+}
+
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: grab;
+  color: var(--c-neut-500);
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  width: 10rem;
+}
+
+.row-name {
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--c-neut-900);
+
+  cursor: text;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.row-description {
+  font-size: 0.875rem;
+
+  color: var(--c-neut-600);
+
+  cursor: text;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.row-name-input,
+.row-description-input {
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  outline: none;
+}
+
+.row-name-input {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-neut-900);
+}
+
+.row-description-input {
+  font-size: 0.875rem;
+  color: var(--c-neut-600);
+}
+
+.value-labels-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.row-left-spacer {
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.value-labels {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.delete-button-spacer {
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.row-colors {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.color-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.value-label {
+  box-sizing: border-box;
+
+  width: 2rem;
+  height: 1.5rem;
+  padding: 0.125rem;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+
+  background: transparent;
+  color: var(--c-neut-700);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  outline: none;
+  overflow: visible;
+  text-align: center;
+  cursor: text;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border-color: var(--c-neut-400);
+    background: var(--c-neut-100);
+  }
+}
+
+.color-box {
+  box-sizing: border-box;
+
+  width: 2rem;
+  height: 3rem;
+  border: 2px solid var(--c-neut-200);
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.color-box-selected {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 2px var(--c-neut-800);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+
+  background: transparent;
+  color: var(--c-neut-500);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: var(--c-neut-200);
+    color: var(--c-neut-900);
+  }
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 2px dashed var(--c-neut-300);
+  border-radius: 0.5rem;
+
+  background: transparent;
+  color: var(--c-neut-600);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    border-color: var(--c-neut-500);
+    background: var(--c-neut-050);
+    color: var(--c-neut-900);
+  }
+}

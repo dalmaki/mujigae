@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+:root {
+  --c-neut-950: #0c0a09;
+  --c-neut-900: #1c1814;
+  --c-neut-800: #2b211f;
+  --c-neut-700: #453c31;
+  --c-neut-600: #584d3e;
+  --c-neut-500: #7b6859;
+  --c-neut-400: #aa9584;
+  --c-neut-300: #dacbbf;
+  --c-neut-200: #eadfd8;
+  --c-neut-100: #f3f3ee;
+  --c-neut-050: #fafaf9;
+
+  --c-neut-950-rgb: 12, 10, 9;
+  --c-neut-900-rgb: 28, 24, 20;
+  --c-neut-800-rgb: 43, 33, 31;
+  --c-neut-700-rgb: 69, 60, 49;
+  --c-neut-600-rgb: 88, 77, 62;
+  --c-neut-500-rgb: 123, 104, 89;
+  --c-neut-400-rgb: 170, 149, 132;
+  --c-neut-300-rgb: 218, 203, 191;
+  --c-neut-200-rgb: 234, 223, 216;
+  --c-neut-100-rgb: 243, 243, 238;
+  --c-neut-050-rgb: 250, 250, 249;
+
+  font-family: 'Onest', sans-serif;
+  color: var(--c-neut-700);
+
+  height: 100dvh;
+}
+
+/* dark theme */
+:root[data-theme='dark'] {
+  --c-neut-950: #fafaf9;
+  --c-neut-900: #f3f3ee;
+  --c-neut-800: #eadfd8;
+  --c-neut-700: #dacbbf;
+  --c-neut-600: #aa9584;
+  --c-neut-500: #7b6859;
+  --c-neut-400: #584d3e;
+  --c-neut-300: #453c31;
+  --c-neut-200: #2b211f;
+  --c-neut-100: #1c1814;
+  --c-neut-050: #0c0a09;
+
+  --c-neut-950-rgb: 250, 250, 249;
+  --c-neut-900-rgb: 243, 243, 238;
+  --c-neut-800-rgb: 234, 223, 216;
+  --c-neut-700-rgb: 218, 203, 191;
+  --c-neut-600-rgb: 170, 149, 132;
+  --c-neut-500-rgb: 123, 104, 89;
+  --c-neut-400-rgb: 88, 77, 62;
+  --c-neut-300-rgb: 69, 60, 49;
+  --c-neut-200-rgb: 43, 33, 31;
+  --c-neut-100-rgb: 28, 24, 20;
+  --c-neut-050-rgb: 12, 10, 9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--c-neut-100);
+}
+
+*::selection {
+  background: rgba(var(--c-neut-500-rgb), 0.3);
+}
+
+*::-webkit-scrollbar {
+  height: 1rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--c-neut-500);
+  border: .25rem solid var(--c-neut-100);
+  border-radius: 1rem;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
