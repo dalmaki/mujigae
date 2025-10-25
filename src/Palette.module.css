@@ -198,10 +198,7 @@
   border: 2px solid var(--c-neut-200);
   border-radius: 0.5rem;
 
-  cursor: pointer;
-
   transition:
-    transform 0.2s,
     box-shadow 0.2s,
     border-color 0.2s;
 

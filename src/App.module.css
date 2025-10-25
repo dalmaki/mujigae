@@ -49,8 +49,9 @@
   flex: 1;
 }
 
-.app-details {
+.app-editor {
   flex: 1.5;
+  overflow-y: auto;
 }
 
 .theme-toggle {
